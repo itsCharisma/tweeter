@@ -24,7 +24,11 @@ body {
   font-family: 'Source Sans Pro', cursive;
 }
 
-
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f4f1ec;
+}
 
 
 /*

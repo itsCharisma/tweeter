@@ -12,13 +12,20 @@ html {
 
 /*
  * Global layout stuff
- */
+. = class */
+.logotext {
+  font-family: 'bungee', cursive;
+}
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', cursive;
 }
+
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

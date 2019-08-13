@@ -1,0 +1,12 @@
+/* The navigation bar */
+nav {
+  overflow: hidden;
+  color: #ffffff;
+  background-color: #4056A1;
+  padding: 1.5em;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 120px;
+  z-index: 9000
+}

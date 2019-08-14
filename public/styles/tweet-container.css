@@ -1,10 +1,8 @@
 .tweet-container-box{
   width: 100%;
-  border: 5px solid #545149;
   background-color: transparent;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
-  height: 250px;
   outline: none;
   transition: box-shadow .3s;
 }
@@ -40,4 +38,13 @@
 
 .icons{
   float: right;
+}
+
+.tweet {
+  border: 5px solid #545149;
+  margin-bottom: 20px;
+}
+
+.tweet img{
+  margin-top: 10px;
 }

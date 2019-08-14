@@ -1,9 +1,7 @@
 .new-tweet textarea {
   font-weight: 600;
   width: 100%;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: none;
   border-bottom: 5px solid #545149;
   background-color: transparent;
   margin-bottom: 0.5em;
@@ -11,6 +9,7 @@
   outline: none;
 }
 
+.new-tweet button,
 .new-tweet input {
   border: none;
   padding: 3px 15px;

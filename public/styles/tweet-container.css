@@ -1,0 +1,41 @@
+.tweet-container-box {
+  width: 100%;
+  border-top: 5px solid #545149;
+  border-left: 5px solid #545149;
+  border-right: 5px solid #545149;
+  border-bottom: 5px solid #545149;
+  background-color: transparent;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  height: 250px;
+  outline: none;
+}
+
+.tweet-container-box header{
+  margin-left: 2%;
+}
+
+.tweet-container-box h3{
+  display: inline-block;
+}
+
+.tweet-container-box h4{
+  float: right;
+  margin-right: 2%;
+}
+
+.tweet-container-box p {
+  margin-left: 5%;
+  display: block;
+}
+
+.tweet-container-box footer{
+    width: 95%;
+    margin-left: 2%;
+    border-top: 5px solid #545149;
+    background-color: transparent;
+}
+
+.icons{
+  float: right;
+}

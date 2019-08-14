@@ -28,7 +28,7 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+];
 
 let createTweetElement = function(obj) {
   const image = obj.user.avatars;
@@ -48,34 +48,34 @@ let createTweetElement = function(obj) {
 </article>`;
 
   return $markup;
- }
+};
 
 const renderTweets = function(tweets) {
   tweets.forEach(function(tweetData) {
     const $tweet = createTweetElement(tweetData);
     $(".tweet-container-box").append($tweet);
   });
-}
+};
 
 $(function() {
   $("#form").on("submit", function(event) {
     event.preventDefault();
     const $form = $(this);
     const data = $form.serialize();
-  $.ajax({
+    $.ajax({
       type: "POST",
       url: '/tweets/',
       data: data
-  })
-  .then(function() {
-    console.log("success", data)
-  })
+    })
+      .then(function() {
+        console.log("success", data);
+      });
 
+  });
 });
-});
 
 
 
-$( document ).ready(function() {
+$(document).ready(function() {
   renderTweets(data);
 });

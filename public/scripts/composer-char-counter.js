@@ -1,15 +1,14 @@
 $(document).ready(function() {
-  $('.new-tweet form').on('keydown', 'textarea', function(event) {
+  $('#tweet-text').on('keydown', function(event) {
 
-  const count = $(this).siblings('.counter');
+  const $this = $(this);
 
-  const counter = 140 - $(this).val().length;
+  const $count = $this.siblings('.counter');
 
-  count.html(counter);
-    if(counter >= 0) {
-      $(count).css('color', 'black');
-       } else {
-         $(count).css('color', 'red');
-      }
-  })
+  const counter = 140 - $this.val().length;
+
+  $count.html(counter);
+  $count.css("color", counter >= 0 ? "black" : "red");
+  });
 });
+

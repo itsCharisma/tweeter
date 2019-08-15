@@ -32,11 +32,49 @@
 
 $(document).ready(function() {
 
+    const timeDifference = function (current, previous) {
+    const msPerMinute = 60 * 1000;
+    const msPerHour = msPerMinute * 60;
+    const msPerDay = msPerHour * 24;
+    const msPerMonth = msPerDay * 30;
+    const msPerYear = msPerDay * 365;
+    const elapsed = current - previous;
+    let plural = 's';
+    if (elapsed < msPerMinute) {
+      const seconds = Math.round(elapsed / 1000);
+      if (seconds === 1) plural = '';
+      return seconds + ' second' + plural + ' ago';
+    } else if (elapsed < msPerHour) {
+      const minutes = Math.round(elapsed / msPerMinute);
+      if (minutes === 1) plural = '';
+      return minutes + ' minute' + plural + ' ago';
+    } else if (elapsed < msPerDay) {
+      const hours = Math.round(elapsed / msPerHour);
+      if (hours === 1) plural = '';
+      return hours + ' hour' + plural + ' ago';
+    } else if (elapsed < msPerMonth) {
+      const days = Math.round(elapsed / msPerDay);
+      if (days === 1) plural = '';
+      return days + ' day' + plural + ' ago';
+    } else if (elapsed < msPerYear) {
+      const months = Math.round(elapsed / msPerMonth);
+      if (months === 1) plural = '';
+      return months + ' month' + plural + ' ago';
+    } else {
+      const years = Math.round(elapsed / msPerYear);
+      if (years === 1) plural = '';
+      return years + ' year' + plural + ' ago';
+    }
+  };
+
+
   let createTweetElement = function(obj) {
     const image = obj.user.avatars;
     const username = obj.user.name;
     const handle = obj.user.handle;
     const tweetText = obj.content.text;
+    const currentTime = new Date();
+    const creationTime = timeDifference(currentTime, obj.created_at);
     const $markup = `<article class="tweet"> 
     <header>
       <img src="${image}" alt="${username}" />
@@ -44,7 +82,7 @@ $(document).ready(function() {
       <h4>${handle}</h4>
     </header>
     <p>${escape(tweetText)}</p>
-    <footer>10 days ago
+    <footer> ${creationTime}
       <div class="icons"><i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></div>
     </footer>
 </article>`;
@@ -61,7 +99,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     tweets.forEach(function(tweetData) {
       const $tweet = createTweetElement(tweetData);
-      $(".tweet-container-box").append($tweet);
+      $(".tweet-container-box").prepend($tweet);
     });
   };
 

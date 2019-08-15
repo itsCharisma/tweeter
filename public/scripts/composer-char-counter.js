@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#tweet-text').on('keydown', function(event) {
+  $('#textMsg').on('keydown', function(event) {
 
     const $this = $(this);
 
@@ -11,4 +11,3 @@ $(document).ready(function() {
     $count.css("color", counter >= 0 ? "black" : "red");
   });
 });
-

@@ -81,9 +81,11 @@ $(document).ready(function() {
       const tweetMsg = data.substring(5);
       if(!tweetMsg) {
         alert("Text area is empty!");
+        return;
       }
       if(tweetMsg.length > 140) {
         alert("Too many characters!");
+        return;
       }
 
 

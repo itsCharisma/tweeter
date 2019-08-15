@@ -7,6 +7,20 @@ nav {
   box-shadow: 0 0 11px #272214;
   top: 0;
   height: 120px;
+  justify-content: space-between;
 }
 
-nav {}
+.write-arrow {
+  float: right;
+  position: relative;
+  transition: box-shadow .3s;
+}
+
+.write-arrow:hover{
+  box-shadow: 0 0 11px #272214;
+
+
+.fas fa-angle-double-down {
+  float: right;
+  box-shadow: 0 0 11px #272214;
+}

@@ -6,11 +6,11 @@ header.top{
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
 }
 
-header h2 {
+header h2{
   text-align: center;
 }
 
-.top img {
+.top img{
   margin: 0 auto;
   display: block; 
   /* inline block --hafiz */

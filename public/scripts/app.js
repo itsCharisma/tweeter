@@ -57,7 +57,7 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
-  
+
   const renderTweets = function(tweets) {
     tweets.forEach(function(tweetData) {
       const $tweet = createTweetElement(tweetData);
@@ -77,6 +77,10 @@ $(document).ready(function() {
       }
     });
   };
+
+  $(".write-arrow").click(function() {
+    $(".new-tweet").toggle("slow");
+  });
 
 
 

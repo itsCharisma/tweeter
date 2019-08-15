@@ -3,29 +3,29 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+html{
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*, *:before, *:after{
   box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
 . = class */
-.logotext {
+.logotext{
   font-family: 'Bungee', cursive;
 }
 
-body {
+body{
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', cursive;
 }
 
-main {
+main{
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;

@@ -1,4 +1,4 @@
-.new-tweet textarea {
+.new-tweet textarea{
   font-weight: 600;
   width: 100%;
   border: none;
@@ -10,7 +10,7 @@
 }
 
 .new-tweet button,
-.new-tweet input {
+.new-tweet input{
   border: none;
   padding: 3px 15px;
   color: #fff;
@@ -18,7 +18,7 @@
   background-color: #4056A9;
 }
 
-.new-tweet span {
+.new-tweet span{
   float: left;
   font-family: 'Bungee', cursive;
 }

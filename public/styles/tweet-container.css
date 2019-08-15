@@ -7,7 +7,7 @@
   transition: box-shadow .3s;
 }
 
-.tweet-container-box:hover{
+.tweet:hover{
   box-shadow: 0 0 11px #272214;
 }
 

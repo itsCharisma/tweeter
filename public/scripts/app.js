@@ -43,7 +43,7 @@ $(document).ready(function() {
       <h3>${username}</h3>
       <h4>${handle}</h4>
     </header>
-    <p>${tweetText}</p>
+    <p>${escape(tweetText)}</p>
     <footer>10 days ago
       <div class="icons"><i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i></div>
     </footer>
@@ -52,12 +52,19 @@ $(document).ready(function() {
     return $markup;
   };
 
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+  
   const renderTweets = function(tweets) {
     tweets.forEach(function(tweetData) {
       const $tweet = createTweetElement(tweetData);
       $(".tweet-container-box").append($tweet);
     });
   };
+
 
 
   const loadTweets = function() {
@@ -87,8 +94,6 @@ $(document).ready(function() {
         alert("Too many characters!");
         return;
       }
-
-
       $.ajax({
         type: "POST",
         url: '/tweets/',

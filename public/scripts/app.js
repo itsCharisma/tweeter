@@ -72,7 +72,6 @@ $(document).ready(function() {
       url: '/tweets/',
       type: 'GET',
       success: function(data) {
-        console.log(data);
         renderTweets(data);
       }
     });
@@ -90,28 +89,26 @@ $(document).ready(function() {
       const $form = $(this);
       const data = $form.serialize();
       const tweetMsg = data.substring(5);
-      if(!tweetMsg) {
-        alert("Text area is empty!");
-        return;
-      }
-      if(tweetMsg.length > 140) {
-        alert("Too many characters!");
-        return;
-      }
+
+      if(!tweetMsg || tweetMsg.length > 140) {
+        console.log("hello");
+        $(".error-msg").slideDown("slow");
+      } else {
       $.ajax({
         type: "POST",
         url: '/tweets/',
         data: data
       })
-        .then(function() {
-          console.log("success", data);
-          loadTweets();
-          $("#textMsg").val('');
-        });
-
-    });
+      .then($(this).children(".counter").html("140"))
+      .then($("#textMsg").val(''))
+      .then($(".error-msg").slideUp("slow"))
+      .then(loadTweets);
+    }
   });
-
+})
+     
+      
 
 
 });
+// ^to document.ready

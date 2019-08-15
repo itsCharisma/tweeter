@@ -48,3 +48,7 @@
 .tweet img{
   margin-top: 10px;
 }
+
+.tweet p{
+  word-wrap: break-word;
+}

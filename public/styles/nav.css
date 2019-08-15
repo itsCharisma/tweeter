@@ -14,15 +14,15 @@ nav{
 .write{
   float: right;
   position: relative;
-  transition: box-shadow .3s;
 }
 
 .write-arrow{
   text-align: center;
+  color: yellow;
 }
 
 .write-arrow:hover{
-  box-shadow: 0 0 11px #272214;
+  color: red;
 }
 
 

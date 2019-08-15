@@ -60,7 +60,6 @@ $(document).ready(function() {
   };
 
 
-
   const loadTweets = function() {
     return $.ajax({
       url: '/tweets/',
@@ -75,11 +74,19 @@ $(document).ready(function() {
 
 
   $(function() {
-    loadTweets();
     $("#form").on("submit", function(event) {
       event.preventDefault();
       const $form = $(this);
       const data = $form.serialize();
+      const tweetMsg = data.substring(5);
+      if(!tweetMsg) {
+        alert("Text area is empty!");
+      }
+      if(tweetMsg.length > 140) {
+        alert("Too many characters!");
+      }
+
+
       $.ajax({
         type: "POST",
         url: '/tweets/',
@@ -87,6 +94,8 @@ $(document).ready(function() {
       })
         .then(function() {
           console.log("success", data);
+          loadTweets();
+          $("#textMsg").val('');
         });
 
     });

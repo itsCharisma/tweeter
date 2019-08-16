@@ -2,7 +2,7 @@ header.top{
   height: 400px;
   width: 100%;
   /* margin-top: 120px; */
-  background-color: #dee600;
+  background-color: #e6008e;
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
 }
 
@@ -13,7 +13,22 @@ header h2{
 .top img{
   margin: 0 auto;
   display: block; 
-  /* inline block --hafiz */
   position: relative;
-  /* justify-content: center; */
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  header.top{
+    width: 40%;
+    float: left;
+    margin: 60px;
+  }
+  header h2 {
+    font-size: 44px;
+  }
+  .top img {
+    width: 256px;
+    height: 256px;
+  }
 }

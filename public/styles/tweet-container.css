@@ -52,3 +52,20 @@
 .tweet p{
   word-wrap: break-word;
 }
+
+/* Tablet Styles
+@media only screen and (min-width: 768px) {
+  .tweet-container-box {
+    width: 33.3%;
+    line-height: 600px;
+  }
+
+  .tweet-container-box {
+    width: 66.7%;
+    float: right
+  }
+
+  .footer {
+    clear: right;
+  }
+} */

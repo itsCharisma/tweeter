@@ -1,10 +1,10 @@
 /* The navigation bar */
 nav{
   color: #ffffff;
-  background-color: #4056A1;
+  background-color: #e6008e;
+  background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
   padding: 1.5em;
   position: sticky;
-  box-shadow: 0 0 11px #272214;
   top: 0;
   height: 120px;
   justify-content: space-between;
@@ -25,13 +25,9 @@ nav{
   color: red;
 }
 
-
-/* @keyframes bounce {
-  0%,  
-  100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(10px);
-  }
-} */
+/* for desktop */
+@media only screen and (min-width: 1024px) {
+nav{ 
+  background-color: #4056A1;
+}
+}

@@ -12,8 +12,10 @@ html{
 }
 
 /*
- * Global layout stuff
-. = class */
+Global layout stuff
+*/
+
+
 .logotext{
   font-family: 'Bungee', cursive;
 }
@@ -26,9 +28,16 @@ body{
 }
 
 main{
-  width: 90%;
+  width: calc(60% - 120px);
   margin: 0 auto;
   background-color: #f4f1ec;
+}
+
+@media only screen and (min-width: 1024px) {
+  main{
+    float: right;
+    padding: 20px;
+  }
 }
 
 

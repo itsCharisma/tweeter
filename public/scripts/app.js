@@ -4,35 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ];
-
 $(document).ready(function() {
 
-    const timeDifference = function (current, previous) {
+  //pull local time
+  const timeDifference = function(current, previous) {
     const msPerMinute = 60 * 1000;
     const msPerHour = msPerMinute * 60;
     const msPerDay = msPerHour * 24;
@@ -67,7 +42,7 @@ $(document).ready(function() {
     }
   };
 
-
+  //create new tweets
   let createTweetElement = function(obj) {
     const image = obj.user.avatars;
     const username = obj.user.name;
@@ -90,11 +65,13 @@ $(document).ready(function() {
     return $markup;
   };
 
+  //prevent malicious intent
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
+
 
   const renderTweets = function(tweets) {
     tweets.forEach(function(tweetData) {
@@ -103,8 +80,7 @@ $(document).ready(function() {
     });
   };
 
-
-
+  //realtime tweets
   const loadTweets = function() {
     return $.ajax({
       url: '/tweets/',
@@ -114,11 +90,9 @@ $(document).ready(function() {
       }
     });
   };
-
   $(".write-arrow").click(function() {
     $(".new-tweet").toggle("slow");
   });
-
 
 
   $(function() {
@@ -128,25 +102,24 @@ $(document).ready(function() {
       const data = $form.serialize();
       const tweetMsg = data.substring(5);
 
-      if(!tweetMsg || tweetMsg.length > 140) {
+      if (!tweetMsg || tweetMsg.length > 140) { //error message logic
         console.log("hello");
         $(".error-msg").slideDown("slow");
       } else {
-      $.ajax({
-        type: "POST",
-        url: '/tweets/',
-        data: data
-      })
-      .then($(this).children(".counter").html("140"))
-      .then($("#textMsg").val(''))
-      .then($(".error-msg").slideUp("slow"))
-      .then(loadTweets);
-    }
+        $.ajax({
+          type: "POST",
+          url: '/tweets/',
+          data: data
+        })
+          .then($(this).children(".counter").html("140"))
+          .then($("#textMsg").val(''))
+          .then($(".error-msg").slideUp("slow"))
+          .then(loadTweets);
+      }
+    });
   });
-})
      
       
 
 
-});
-// ^to document.ready
+}); // to document.ready

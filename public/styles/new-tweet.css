@@ -19,7 +19,13 @@
 }
 
 .new-tweet span{
-  float: left;
+  float: right;
   font-family: 'Bungee', cursive;
 }
 
+/* for desktop */
+@media only screen and (min-width: 1024px) {
+  nav{ 
+
+  }
+  }

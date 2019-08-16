@@ -28,15 +28,18 @@ body{
 }
 
 main{
-  width: calc(60% - 120px);
+  width: calc(90% - 120px);
   margin: 0 auto;
   background-color: #f4f1ec;
 }
 
+/* for desktop */
 @media only screen and (min-width: 1024px) {
   main{
+    width: calc(60% - 120px);
     float: right;
     padding: 20px;
+    margin-top: 120px;
   }
 }
 

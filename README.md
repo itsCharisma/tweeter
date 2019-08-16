@@ -18,5 +18,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of tweeter on desktop](https://https://github.com/itsCharisma/tweeter/blob/master/docs/Tweeter%20Desktop.png)
-!["Screenshot of tweeter on mobile](https://https://github.com/itsCharisma/tweeter/blob/master/docs/Tweeter%20Mobile.png)
+!["Screenshot of tweeter on desktop"](https://https://github.com/itsCharisma/tweeter/blob/master/docs/Tweeter%20Desktop.png)
+!["Screenshot of tweeter on mobile"](https://https://github.com/itsCharisma/tweeter/blob/master/docs/Tweeter%20Mobile.png)

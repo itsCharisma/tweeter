@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#textMsg').on('keydown', function(event) { //count characters in new twees messages
+  $('#textMsg').on('keyup', function(event) { //count characters in new twees messages
 
     const $this = $(this);
 

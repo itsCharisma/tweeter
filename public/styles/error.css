@@ -7,3 +7,10 @@
   margin: 50px;
   display: none;
 }
+@media only screen and (min-width: 1024px) {
+  .error-msg{
+    margin-top: 140px;
+    width: 40%;
+    float: right;
+    margin-bottom: -100px;
+  }

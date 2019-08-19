@@ -27,9 +27,10 @@ nav{
 
 /* for desktop */
 @media only screen and (min-width: 1024px) {
-nav{ 
+nav{
   position: fixed;
   width: 100%;
   background-color: yellow;
+  margin-bottom: 0;
 }
 }

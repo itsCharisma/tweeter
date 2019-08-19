@@ -94,6 +94,7 @@ $(document).ready(function() {
     $(".new-tweet").toggle("slow");
   });
 
+  loadTweets();
 
   $(function() {
     $("#form").on("submit", function(event) {
